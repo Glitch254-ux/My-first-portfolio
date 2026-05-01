@@ -11,7 +11,8 @@ const msgPath = path.join(__dirname, 'messages.json');
 
 app.use(cors());
 app.use(express.json());
-// Serves your frontend files from the public folder
+
+// Serve frontend files from the public folder
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Initialize messages file if it doesn't exist
@@ -21,7 +22,7 @@ if (!fs.existsSync(msgPath)) {
 
 app.post('/messages', (req, res) => {
     try {
-        // THIS IS WHAT YOU WILL SEE IN THE RENDER LOGS
+        // THIS WILL APPEAR IN YOUR RENDER LOGS
         console.log("================================");
         console.log("NEW MESSAGE RECEIVED!");
         console.log("From:", req.body.name);
@@ -41,6 +42,11 @@ app.post('/messages', (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running and listening on port ${PORT}`);
+// Root route to check if server is awake
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is live on port ${PORT}`);
 });
