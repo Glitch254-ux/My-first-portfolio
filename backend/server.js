@@ -4,18 +4,18 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+// Middleware - This connects your CSS and JS to the server
 app.use(express.json()); 
 app.use(express.static(path.join(__dirname, '../public')));
 
 const messagesFilePath = path.join(__dirname, 'messages.json');
 
-// Routes
+// Routes - Ensures your portfolio loads at the main URL
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-// GET Messages
+// GET Messages - For checking feedback
 app.get('/messages', (req, res) => {
     if (!fs.existsSync(messagesFilePath)) return res.json([]);
     try {
@@ -26,7 +26,7 @@ app.get('/messages', (req, res) => {
     }
 });
 
-// POST Messages (This stops the "Backend Error" popup)
+// POST Messages - The fix for the submission error
 app.post('/messages', (req, res) => {
     const newMessage = req.body;
     let messages = [];
