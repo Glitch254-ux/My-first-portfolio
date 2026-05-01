@@ -4,16 +4,16 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// This middleware is required to read the JSON data from your contact form
+// Middleware for parsing JSON and serving your frontend files
 app.use(express.json()); 
 app.use(express.static(path.join(__dirname, '../public')));
 
-// 1. Serve your Frontend
+// 1. Root Route - Serves your Portfolio
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-// 2. GET messages (to view them)
+// 2. GET Messages - Reads from the file in the SAME folder
 app.get('/messages', (req, res) => {
     const filePath = path.join(__dirname, 'messages.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
@@ -22,7 +22,7 @@ app.get('/messages', (req, res) => {
     });
 });
 
-// 3. POST messages (THIS FIXES THE ERROR POPUP)
+// 3. POST Message - Saves new form submissions
 app.post('/messages', (req, res) => {
     const filePath = path.join(__dirname, 'messages.json');
     const newMessage = req.body;
@@ -39,5 +39,5 @@ app.post('/messages', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`ENGINE SECURED. Full-stack running on port ${PORT}`);
+    console.log(`Portfolio Engine Online at Port ${PORT}`);
 });
