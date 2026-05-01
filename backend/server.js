@@ -1,37 +1,46 @@
 const express = require('express');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
+const msgPath = path.join(__dirname, 'messages.json');
 
+app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')));
 
-// --- THE ABSOLUTE PATH LOGIC ---
-// path.resolve ensures Render knows exactly where the public folder is
-const publicPath = path.resolve(__dirname, '../public');
-app.use(express.static(publicPath));
-
-// Ensure messages.json exists so the server doesn't crash on startup
-const msgPath = path.resolve(__dirname, 'messages.json');
+// Ensure messages.json exists
 if (!fs.existsSync(msgPath)) {
-    fs.writeFileSync(msgPath, JSON.stringify([], null, 2));
+    fs.writeFileSync(msgPath, JSON.stringify([]));
 }
 
 app.post('/messages', (req, res) => {
     try {
+        // --- THIS LINE IS THE KEY ---
+        // This will print the message content to your Render Logs immediately
+        console.log("!!! NEW MESSAGE FROM WEBSITE:", req.body);
+
         const data = fs.readFileSync(msgPath, 'utf8');
         const msgs = JSON.parse(data || '[]');
-        msgs.push(req.body);
+        
+        // Add timestamp so you know exactly when it arrived
+        const newMessage = {
+            ...req.body,
+            receivedAt: new Date().toLocaleString()
+        };
+        
+        msgs.push(newMessage);
         fs.writeFileSync(msgPath, JSON.stringify(msgs, null, 2));
+        
         res.status(200).json({ success: true });
     } catch (err) {
-        console.error("Storage error:", err);
+        console.error("Error saving message:", err);
         res.status(500).json({ error: "Storage error" });
     }
 });
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(publicPath, 'index.html'));
+app.listen(PORT, () => {
+    console.log(`Server live on port ${PORT}`);
 });
-
-app.listen(PORT, () => console.log(`Server live on ${PORT}`));
