@@ -3,108 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshack | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Meshack Nyakundi | Portfolio</title>
+    <style>
+        /* Quick styling to make it look decent before tomorrow */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+        .highlight { color: #3498db; }
+        .hero-buttons { margin-top: 20px; }
+        .btn-primary, .btn-secondary {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .btn-primary { background: #3498db; color: white; }
+        .btn-secondary { border: 2px solid white; color: white; }
+        
+        .contact-container {
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #27ae60; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Meshack<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 14px;">Let's Talk</a>
-    </nav>
-
-    <section id="home" class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="hero-content">
-            <div class="badge">Open for Internships 2026</div>
-            <h1>Hi, I'm <span class="name">Meshack</span></h1>
-            <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">
-                a passionate <span id="typing-text"></span><span class="cursor">|</span>
-            </h2>
-            <p style="max-width: 500px; color: #888; margin-bottom: 30px;">
-                B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.
-            </p>
-            <div class="hero-btns">
-                <a href="#work" style="color: var(--primary); text-decoration: none; margin-right: 20px;">Explore My Work</a>
-                <a href="#contact" style="color: #888; text-decoration: none;">Contact Me</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-circle">
-                <span>MN</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="container reveal">
-        <h2 style="margin-bottom: 10px;">// 01. About Me</h2>
-        <p style="color: #888; margin-bottom: 40px; max-width: 800px;">
-            I am a dedicated IT student with a focus on building scalable web applications and intuitive user interfaces. I love turning complex problems into simple, beautiful designs.
-        </p>
-        
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Frontend</h3>
-                <p>HTML, CSS, JavaScript, React</p>
-            </div>
-            <div class="skill-card">
-                <h3>Backend</h3>
-                <p>Node.js, Express, MongoDB</p>
-            </div>
-            <div class="skill-card">
-                <h3>Tools</h3>
-                <p>Git, VS Code, Figma</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- WORK SECTION -->
-    <section id="work" class="container reveal">
-        <h2>// 02. My Work</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>E-Commerce Platform</h3>
-                <p>A full-stack shop with secure checkout.</p>
-            </div>
-            <div class="project-card">
-                <h3>Task Manager</h3>
-                <p>Productivity app built with Node.js.</p>
+            <h1>Hi, I'm <span class="highlight">Meshack Nyakundi</span></h1>
+            <p>Full-Stack Developer | Problem Solver | Tech Enthusiast</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Get In Touch</a>
+                <a href="https://github.com" class="btn-secondary" target="_blank">My GitHub</a>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="container reveal">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>// 03. Contact</h2>
-                <p style="font-size: 24px; margin-bottom: 20px;">Let's build something amazing.</p>
-                <div class="social-links">
-                    <a href="#" style="color: var(--secondary);">GitHub</a>
-                    <a href="#" style="color: var(--secondary); margin-left: 15px;">LinkedIn</a>
-                </div>
-            </div>
-            
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <section id="contact" class="contact-container">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <footer style="text-align: center; padding: 40px; color: #444; font-size: 14px;">
-        &copy; 2026 Meshack. Built with Passion.
-    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
 
-    <script src="script.js"></script>
+            try {
+                const response = await fetch('/messages', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (response.ok) {
+                    alert('Message sent! Check the Render logs.');
+                    e.target.reset();
+                }
+            } catch (err) {
+                alert('Error sending message');
+            }
+        });
+    </script>
 </body>
 </html>
