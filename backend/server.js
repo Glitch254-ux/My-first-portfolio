@@ -4,40 +4,48 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware for parsing JSON and serving your frontend files
+// 1. MIDDLEWARE
+// Allows the server to read the JSON data from your contact form
 app.use(express.json()); 
+// Points to your CSS/JS files in the public folder
 app.use(express.static(path.join(__dirname, '../public')));
 
-// 1. Root Route - Serves your Portfolio
+// 2. FILE PATH
+// Targets messages.json inside the backend folder
+const messagesFilePath = path.join(__dirname, 'messages.json');
+
+// 3. ROUTES
+// Serves your index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-// 2. GET Messages - Reads from the file in the SAME folder
+// GET Messages: Reads the inbox file
 app.get('/messages', (req, res) => {
-    const filePath = path.join(__dirname, 'messages.json');
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) return res.status(500).json({ error: "Could not read messages" });
-        res.json(JSON.parse(data || '[]'));
-    });
+    if (!fs.existsSync(messagesFilePath)) return res.json([]);
+    const data = fs.readFileSync(messagesFilePath, 'utf8');
+    res.json(JSON.parse(data || '[]'));
 });
 
-// 3. POST Message - Saves new form submissions
+// POST Messages: Handles the form and stops the error popup
 app.post('/messages', (req, res) => {
-    const filePath = path.join(__dirname, 'messages.json');
     const newMessage = req.body;
-
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        const messages = err ? [] : JSON.parse(data || '[]');
-        messages.push(newMessage);
-
-        fs.writeFile(filePath, JSON.stringify(messages, null, 2), (err) => {
-            if (err) return res.status(500).json({ error: "Failed to save message" });
-            res.status(200).json({ success: true });
-        });
-    });
+    let messages = [];
+    
+    if (fs.existsSync(messagesFilePath)) {
+        const data = fs.readFileSync(messagesFilePath, 'utf8');
+        try {
+            messages = JSON.parse(data || '[]');
+        } catch (e) {
+            messages = [];
+        }
+    }
+    
+    messages.push(newMessage);
+    fs.writeFileSync(messagesFilePath, JSON.stringify(messages, null, 2));
+    res.status(200).json({ success: true });
 });
 
 app.listen(PORT, () => {
-    console.log(`Portfolio Engine Online at Port ${PORT}`);
+    console.log(`SERVER LIVE: Running on port ${PORT}`);
 });
