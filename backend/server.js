@@ -1,17 +1,34 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 1. Tell the server to look inside the 'public' folder
+// This line is CRITICAL: it lets the server read the form data
+app.use(express.json()); 
 app.use(express.static(path.join(__dirname, '../public')));
 
-// 2. Serve your index.html when someone visits the site
+// 1. Serves your Frontend
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-// 3. Start the server
+// 2. Receives your Messages (Fixes the Error Popup)
+app.post('/messages', (req, res) => {
+    const filePath = path.join(__dirname, 'messages.json');
+    const newMessage = req.body;
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        const messages = err ? [] : JSON.parse(data || '[]');
+        messages.push(newMessage);
+
+        fs.writeFile(filePath, JSON.stringify(messages, null, 2), (err) => {
+            if (err) return res.status(500).json({ error: "Failed to save" });
+            res.status(200).json({ success: true });
+        });
+    });
+});
+
 app.listen(PORT, () => {
-    console.log(`ENGINE SECURED. Portfolio running on port ${PORT}`);
+    console.log(`ENGINE SECURED. Full-stack running on port ${PORT}`);
 });
