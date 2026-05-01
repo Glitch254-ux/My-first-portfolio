@@ -3,141 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshack | UI Designer Portfolio</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Base Styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #000; color: #fff; font-family: 'Poppins', sans-serif; line-height: 1.6; }
-        
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 8%; background: rgba(0,0,0,0.9); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 26px; font-weight: 700; letter-spacing: -1px; }
-        .logo span { color: #d63384; }
-        .nav-links a { color: #888; text-decoration: none; margin-left: 35px; font-size: 14px; transition: 0.3s; }
-        .nav-links a:hover { color: #fff; }
-        .lets-talk { background: #fff; color: #000 !important; padding: 12px 28px; border-radius: 30px; font-weight: 600; }
-
-        /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 8%; min-height: 85vh; }
-        .hero-content { max-width: 550px; }
-        .badge { background: #1a1a1a; color: #9b51e0; padding: 6px 16px; border-radius: 20px; font-size: 12px; border: 1px solid #333; font-weight: 600; letter-spacing: 1px; }
-        
-        .hero-content h1 { font-size: 65px; font-weight: 700; line-height: 1.1; margin: 25px 0; }
-        .gradient-text { background: linear-gradient(90deg, #9b51e0, #3081ed); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        .hero-content p { color: #999; font-size: 17px; margin-bottom: 35px; max-width: 450px; }
-        
-        .hero-btns { display: flex; align-items: center; gap: 25px; }
-        .btn-work { background: linear-gradient(90deg, #9b51e0, #3081ed); color: #fff; padding: 16px 35px; border-radius: 12px; text-decoration: none; font-weight: 600; box-shadow: 0 10px 20px rgba(155, 81, 224, 0.2); transition: 0.3s; }
-        .btn-work:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(155, 81, 224, 0.3); }
-        .btn-contact { color: #fff; text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: 0.3s; }
-        .btn-contact:hover { border-bottom: 2px solid #9b51e0; }
-
-        /* Hero Image/Circle */
-        .hero-visual { position: relative; width: 450px; height: 450px; display: flex; align-items: center; justify-content: center; }
-        .mn-circle { width: 100%; height: 100%; border: 1px solid rgba(155, 81, 224, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
-        .mn-circle::after { content: ''; position: absolute; width: 105%; height: 105%; border: 1px solid rgba(48, 129, 237, 0.2); border-radius: 50%; }
-        .mn-circle h2 { font-size: 140px; color: #9b51e0; opacity: 0.9; letter-spacing: -8px; filter: drop-shadow(0 0 15px rgba(155, 81, 224, 0.5)); }
-
-        /* Contact Section */
-        #contact { padding: 100px 8%; background: #050505; border-top: 1px solid #111; }
-        .contact-header { text-align: center; margin-bottom: 50px; }
-        .contact-header h2 { font-size: 36px; margin-bottom: 10px; }
-        .contact-header p { color: #666; }
-        
-        .contact-form { max-width: 600px; margin: 0 auto; background: #0a0a0a; padding: 40px; border-radius: 20px; border: 1px solid #1a1a1a; }
-        .form-group { margin-bottom: 20px; }
-        input, textarea { width: 100%; background: #111; border: 1px solid #222; padding: 15px; color: #fff; border-radius: 10px; outline: none; transition: 0.3s; font-family: inherit; }
-        input:focus, textarea:focus { border-color: #9b51e0; background: #151515; }
-        .send-btn { width: 100%; background: linear-gradient(90deg, #9b51e0, #3081ed); color: #fff; border: none; padding: 16px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: 0.3s; }
-        .send-btn:hover { opacity: 0.9; transform: scale(1.01); }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .hero { flex-direction: column; text-align: center; padding-top: 40px; }
-            .hero-content { max-width: 100%; margin-bottom: 50px; }
-            .hero-btns { justify-content: center; }
-            .hero-visual { width: 300px; height: 300px; }
-            .mn-circle h2 { font-size: 100px; }
-        }
-    </style>
+    <title>Meshack | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="logo">Meshack<span>.</span></div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Work</a>
-            <a href="#contact" class="lets-talk">Let's Talk</a>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 14px;">Let's Talk</a>
     </nav>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <span class="badge">OPEN FOR INTERNSHIPS 2026</span>
-            <h1>Hi, I'm <span class="gradient-text">Meshack</span> a passionate <span class="gradient-text">UI Designer</span></h1>
-            <p>B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
+            <div class="badge">Open for Internships 2026</div>
+            <h1>Hi, I'm <span class="name">Meshack</span></h1>
+            <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">
+                a passionate <span id="typing-text"></span><span class="cursor">|</span>
+            </h2>
+            <p style="max-width: 500px; color: #888; margin-bottom: 30px;">
+                B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.
+            </p>
             <div class="hero-btns">
-                <a href="#" class="btn-work">Explore My Work</a>
-                <a href="#contact" class="btn-contact">Contact Me</a>
+                <a href="#work" style="color: var(--primary); text-decoration: none; margin-right: 20px;">Explore My Work</a>
+                <a href="#contact" style="color: #888; text-decoration: none;">Contact Me</a>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="mn-circle">
-                <h2>MN</h2>
+        <div class="hero-image">
+            <div class="image-circle">
+                <span>MN</span>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="contact-header">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind? Let's build something amazing together.</p>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="container reveal">
+        <h2 style="margin-bottom: 10px;">// 01. About Me</h2>
+        <p style="color: #888; margin-bottom: 40px; max-width: 800px;">
+            I am a dedicated IT student with a focus on building scalable web applications and intuitive user interfaces. I love turning complex problems into simple, beautiful designs.
+        </p>
+        
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <p>Node.js, Express, MongoDB</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Git, VS Code, Figma</p>
+            </div>
         </div>
-        <div class="contact-form">
-            <form id="portfolioForm">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
+    </section>
+
+    <!-- WORK SECTION -->
+    <section id="work" class="container reveal">
+        <h2>// 02. My Work</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-stack shop with secure checkout.</p>
+            </div>
+            <div class="project-card">
+                <h3>Task Manager</h3>
+                <p>Productivity app built with Node.js.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="container reveal">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>// 03. Contact</h2>
+                <p style="font-size: 24px; margin-bottom: 20px;">Let's build something amazing.</p>
+                <div class="social-links">
+                    <a href="#" style="color: var(--secondary);">GitHub</a>
+                    <a href="#" style="color: var(--secondary); margin-left: 15px;">LinkedIn</a>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-                </div>
-                <button type="submit" class="send-btn">Send Message</button>
+            </div>
+            
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
 
-    <script>
-        document.getElementById('portfolioForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData.entries());
+    <footer style="text-align: center; padding: 40px; color: #444; font-size: 14px;">
+        &copy; 2026 Meshack. Built with Passion.
+    </footer>
 
-            try {
-                const response = await fetch('/messages', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    alert('Success! Message sent to the database.');
-                    e.target.reset();
-                } else {
-                    alert('Submission failed. Check server.');
-                }
-            } catch (err) {
-                console.error(err);
-                alert('Connection error.');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
