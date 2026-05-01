@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meshack | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">Meshack<span>.</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+        </div>
+        <a href="#contact" class="btn-hire-nav">Let's Talk</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="badge">Open for Internships 2026</span>
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Meshack</span><br>a passionate <span id="typewriter" class="gradient-text"></span></h1>
+            <p class="hero-subtitle">B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
+            <div class="btn-group">
+                <a href="#projects" class="btn-fill">Explore My Work</a>
+                <a href="#contact" class="btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <div class="glow-avatar">
+            <div class="avatar-inner">
+                <img src="profile.png" alt="MN" onerror="this.src='https://ui-avatars.com/api/?name=MN&background=0D0E12&color=9D50BB&size=400'">
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about" class="section-padding">
+            <p class="section-tag">// 01. About Me</p>
+            <div class="bento-grid-about">
+                <div class="bento-card">
+                    <h2>Bridging Design & Logic</h2>
+                    <p>I specialize in creating seamless digital experiences. Based in Kenya, I'm currently pursuing my B.Sc. in IT.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="bento-card"><span>🚀</span><p>2+ Years Coding</p></div>
+                    <div class="bento-card"><span>✅</span><p>10+ Projects</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-padding">
+            <p class="section-tag">// 02. Tech Stack</p>
+            <div class="skills-grid">
+                <div class="bento-card">
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Frontend</span><span>90%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Backend</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+                <div class="bento-card">
+                    <div class="skill-item">
+                        <div class="skill-info"><span>UI/UX</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Database</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-padding">
+            <p class="section-tag">// 03. Selected Work</p>
+            <div class="projects-grid">
+                <div class="bento-card project"><h3>E-Commerce</h3><p>Full-stack retail solution.</p></div>
+                <div class="bento-card project"><h3>Task App</h3><p>Productivity management.</p></div>
+                <div class="bento-card project"><h3>AI Gallery</h3><p>Smart image tagging.</p></div>
+                <div class="bento-card project"><h3>Portfolio</h3><p>Custom engine.</p></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <p class="section-tag">// 04. Contact</p>
+            <div class="contact-bento">
+                <div class="bento-card">
+                    <h2>Let's build something amazing.</h2>
+                    <div class="social-links-grid">
+                        <a href="#" class="social-btn">GitHub</a>
+                        <a href="#" class="social-btn">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="bento-card">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn-fill">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+node_modules/
+backend/messages.json
+.DS_Store
