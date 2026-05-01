@@ -11,36 +11,32 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
-// Ensure messages.json exists
+// Initialize messages file if missing
 if (!fs.existsSync(msgPath)) {
     fs.writeFileSync(msgPath, JSON.stringify([]));
 }
 
 app.post('/messages', (req, res) => {
     try {
-        // --- THIS LINE IS THE KEY ---
-        // This will print the message content to your Render Logs immediately
-        console.log("!!! NEW MESSAGE FROM WEBSITE:", req.body);
+        // This is what will show up in your Render Logs
+        console.log("!!! NEW MESSAGE RECEIVED:", req.body);
 
         const data = fs.readFileSync(msgPath, 'utf8');
         const msgs = JSON.parse(data || '[]');
         
-        // Add timestamp so you know exactly when it arrived
-        const newMessage = {
+        msgs.push({
             ...req.body,
-            receivedAt: new Date().toLocaleString()
-        };
-        
-        msgs.push(newMessage);
+            date: new Date().toISOString()
+        });
+
         fs.writeFileSync(msgPath, JSON.stringify(msgs, null, 2));
-        
         res.status(200).json({ success: true });
     } catch (err) {
-        console.error("Error saving message:", err);
-        res.status(500).json({ error: "Storage error" });
+        console.error("Server Error:", err);
+        res.status(500).json({ error: "Failed to save message" });
     }
 });
 
 app.listen(PORT, () => {
-    console.log(`Server live on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
