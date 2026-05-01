@@ -42,4 +42,26 @@ if (contactForm) {
         } catch (error) { alert('Backend Connection Error'); }
     });
 }
-document.addEventListener('DOMContentLoaded', type);
+document.addEventListener('DOMContentLoaded', type);// 1. Mouse Spotlight Effect
+const spotlight = document.createElement('div');
+spotlight.style.cssText = `
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 9999;
+    background: radial-gradient(circle 200px at 0% 0%, rgba(168, 85, 247, 0.08), transparent);
+`;
+document.body.appendChild(spotlight);
+
+window.addEventListener('mousemove', (e) => {
+    spotlight.style.background = `radial-gradient(circle 300px at ${e.clientX}px ${e.clientY}px, rgba(168, 85, 247, 0.12), transparent)`;
+});
+
+// 2. Scroll Reveal Observer
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meshack | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <nav>
         <div class="logo">Meshack<span>.</span></div>
         <ul class="nav-links">
@@ -15,20 +17,22 @@
             <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="nav-btn">Let's Talk</a>
+        <a href="#contact" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 14px;">Let's Talk</a>
     </nav>
 
-    <header id="home" class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <span class="badge">Open for Internships 2026</span>
+            <div class="badge">Open for Internships 2026</div>
             <h1>Hi, I'm <span class="name">Meshack</span></h1>
-            <p class="hero-text">a passionate <span id="typing-text"></span><span class="cursor">|</span></p>
-            <p class="sub-text">
+            <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">
+                a passionate <span id="typing-text"></span><span class="cursor">|</span>
+            </h2>
+            <p style="max-width: 500px; color: #888; margin-bottom: 30px;">
                 B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.
             </p>
             <div class="hero-btns">
-                <a href="#work" class="btn-primary">Explore My Work</a>
-                <a href="#contact" class="btn-secondary">Contact Me</a>
+                <a href="#work" style="color: var(--primary); text-decoration: none; margin-right: 20px;">Explore My Work</a>
+                <a href="#contact" style="color: #888; text-decoration: none;">Contact Me</a>
             </div>
         </div>
         <div class="hero-image">
@@ -36,50 +40,70 @@
                 <span>MN</span>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>// 01. About Me</h2>
-            <p>I am a dedicated IT student with a focus on building scalable web applications and intuitive user interfaces. I love turning complex problems into simple, beautiful designs.</p>
-            <div class="skills-grid">
-                <div class="skill-card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
-                <div class="skill-card"><h3>Backend</h3><p>Node.js, Express, MongoDB</p></div>
-                <div class="skill-card"><h3>Tools</h3><p>Git, VS Code, Figma</p></div>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="container reveal">
+        <h2 style="margin-bottom: 10px;">// 01. About Me</h2>
+        <p style="color: #888; margin-bottom: 40px; max-width: 800px;">
+            I am a dedicated IT student with a focus on building scalable web applications and intuitive user interfaces. I love turning complex problems into simple, beautiful designs.
+        </p>
+        
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <p>Node.js, Express, MongoDB</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Git, VS Code, Figma</p>
             </div>
         </div>
     </section>
 
-    <section id="work" class="work">
-        <div class="container">
-            <h2>// 02. My Work</h2>
-            <div class="projects-grid">
-                <div class="project-card"><h3>E-Commerce Platform</h3><p>A full-stack shop with secure checkout.</p></div>
-                <div class="project-card"><h3>Task Manager</h3><p>Productivity app built with Node.js.</p></div>
+    <!-- WORK SECTION -->
+    <section id="work" class="container reveal">
+        <h2>// 02. My Work</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-stack shop with secure checkout.</p>
+            </div>
+            <div class="project-card">
+                <h3>Task Manager</h3>
+                <p>Productivity app built with Node.js.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>// 03. Contact</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's build something amazing.</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-btn">GitHub</a>
-                        <a href="#" class="social-btn">LinkedIn</a>
-                    </div>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="container reveal">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>// 03. Contact</h2>
+                <p style="font-size: 24px; margin-bottom: 20px;">Let's build something amazing.</p>
+                <div class="social-links">
+                    <a href="#" style="color: var(--secondary);">GitHub</a>
+                    <a href="#" style="color: var(--secondary); margin-left: 15px;">LinkedIn</a>
                 </div>
-                <form id="contact-form">
-                    <input type="text" id="name" placeholder="Name" required>
-                    <input type="email" id="email" placeholder="Email" required>
-                    <textarea id="message" placeholder="Message" required></textarea>
-                    <button type="submit" id="submit-btn">Send Message</button>
-                </form>
             </div>
+            
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
+
+    <footer style="text-align: center; padding: 40px; color: #444; font-size: 14px;">
+        &copy; 2026 Meshack. Built with Passion.
+    </footer>
 
     <script src="script.js"></script>
 </body>
