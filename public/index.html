@@ -19,6 +19,9 @@
             -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
             transition: background-color 5000s ease-in-out 0s;
         }
+        /* Layout adjustments for the new Hero structure */
+        .hero-text h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 0.5rem; font-weight: 800; }
+        .hero-text h1.text-gradient { min-height: 1.2em; }
     </style>
 </head>
 <body>
@@ -38,16 +41,23 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-text" data-aos="fade-right">
-                <span class="status-tag">OPEN FOR INTERNSHIPS 2026</span>
+                <span class="status-tag">Open for Internships 2026</span>
                 <h1>Hi, I'm <span class="text-gradient">Meshack</span></h1>
-                <p>A passionate <span id="typing"></span> crafting high-end digital experiences through clean code and modern design.</p>
+                <h1>a passionate</h1>
+                <h1 class="text-gradient"><span id="typing"></span></h1>
+                
+                <p>B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
+                
                 <div class="hero-btns">
                     <a href="#work" class="btn btn-primary">Explore My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
+            
             <div class="hero-visual" data-aos="zoom-in">
-                <div class="glow-sphere"></div>
+                <div class="glow-sphere">
+                    <span class="initials">MN</span>
+                </div>
             </div>
         </div>
     </section>
@@ -85,12 +95,14 @@
             <span class="comment-label" data-aos="fade-up">// 02. Selected Work</span>
             <div class="projects-container">
                 
+                <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up">
                     <h3>Personal Portfolio</h3>
                     <p>The interactive 2026 version of my professional identity. Optimized for visibility and verified via Google Search Console.</p>
                     <a href="https://github.com/Glitch254-ux/My-first-portfolio" class="project-link" target="_blank">GITHUB REPO →</a>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>Web Verification Lab</h3>
                     <p>Configured GitHub Pages and connected this site to Google Search Console for real-time tracking and indexing.</p>
@@ -123,16 +135,19 @@
         </div>
     </section>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
         var typed = new Typed('#typing', {
-            strings: ['Frontend Developer', 'UI/UX Designer', 'Creative Technologist', 'Problem Solver'],
+            strings: ['Passionate Developer', 'Frontend Developer', 'Problem Solver', 'Tech Enthusiast'],
             typeSpeed: 60,
             backSpeed: 40,
-            loop: true
+            backDelay: 2000,
+            loop: true,
+            cursorChar: '|'
         });
 
         window.onpageshow = function(event) {
