@@ -19,9 +19,7 @@
             -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
             transition: background-color 5000s ease-in-out 0s;
         }
-        /* Layout adjustments for the new Hero structure */
         .hero-text h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 0.5rem; font-weight: 800; }
-        .hero-text h1.text-gradient { min-height: 1.2em; }
     </style>
 </head>
 <body>
@@ -94,21 +92,17 @@
         <div class="container">
             <span class="comment-label" data-aos="fade-up">// 02. Selected Work</span>
             <div class="projects-container">
-                
-                <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up">
                     <h3>Personal Portfolio</h3>
                     <p>The interactive 2026 version of my professional identity. Optimized for visibility and verified via Google Search Console.</p>
                     <a href="https://github.com/Glitch254-ux/My-first-portfolio" class="project-link" target="_blank">GITHUB REPO →</a>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>Web Verification Lab</h3>
                     <p>Configured GitHub Pages and connected this site to Google Search Console for real-time tracking and indexing.</p>
                     <span class="status-purple">COMPLETED</span>
                 </div>
-
             </div>
         </div>
     </section>
@@ -125,7 +119,7 @@
                     </div>
                 </div>
                 
-                <form id="my-form" action="https://formspree.io/f/mnnnnooz" method="POST" class="contact-form">
+                <form id="my-form" action="https://formspree.io/f/meenovaq" method="POST" class="contact-form">
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
@@ -135,19 +129,18 @@
         </div>
     </section>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
         var typed = new Typed('#typing', {
-            strings: ['Passionate Developer', 'Frontend Developer', 'Problem Solver', 'Tech Enthusiast'],
+            /* Fixed: Removed 'Passionate' from strings to avoid repetition with the static 'a passionate' text */
+            strings: ['Developer', 'UI/UX Designer', 'Problem Solver', 'Tech Enthusiast'],
             typeSpeed: 60,
             backSpeed: 40,
             backDelay: 2000,
-            loop: true,
-            cursorChar: '|'
+            loop: true
         });
 
         window.onpageshow = function(event) {
