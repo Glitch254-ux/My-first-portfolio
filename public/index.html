@@ -27,10 +27,7 @@
         <section class="hero-container">
             <div class="hero-content">
                 <p class="hero-tag">AVAILABLE FOR OPPORTUNITIES 2026</p>
-                <h1 class="hero-title">
-                    I'm Meshack<br>
-                    <span class="typing-animate"></span>
-                </h1>
+                <h1 class="hero-title">I'm Meshack<br><span class="typing-animate"></span></h1>
                 <p class="hero-subtext">B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
                 <div class="hero-btns">
                     <a href="#work" class="btn-primary">Explore My Work</a>
@@ -45,31 +42,28 @@
             </div>
         </section>
 
-        <!-- About Section (Full Content) -->
-        <section id="about" class="reveal">
+        <!-- About Section -->
+        <section id="about" class="reveal section-padding">
             <div class="section-header">
                 <span class="section-index">01.</span> <h2>About Me</h2>
             </div>
             <div class="bio-content">
                 <div class="bio-text">
                     <h2>Solving problems through <span>creative code</span>.</h2>
-                    <p>I am an IT Student with a growing passion for technology and software development. I have been building my skills through hands-on projects, especially in web development using <strong>HTML, CSS, and JavaScript</strong>. I enjoy creating responsive and visually appealing websites, as well as exploring how frontend and backend systems work together.</p>
-                    <p>Through my learning journey, I have developed problem-solving skills and a strong interest in improving user experience and design. I am constantly learning new tools and techniques to become a better developer.</p>
+                    <p>I am an IT Student with a growing passion for technology and software development. I have been building my skills through hands-on projects, especially in web development using <strong>HTML, CSS, and JavaScript</strong>.</p>
+                    <p>I enjoy creating responsive and visually appealing websites, exploring how frontend and backend systems work together to improve user experience.</p>
                 </div>
                 
                 <div class="services-grid">
                     <div class="service-card purple">
-                        <div class="card-icon">🎨</div>
                         <h3>UI/UX Design</h3>
-                        <p>User research and visual design focusing on intuitive experiences.</p>
+                        <p>Focusing on intuitive experiences and visual research.</p>
                     </div>
                     <div class="service-card blue">
-                        <div class="card-icon">⚡</div>
                         <h3>Frontend Dev</h3>
                         <p>Building responsive, high-performance websites with modern JS.</p>
                     </div>
                     <div class="service-card pink">
-                        <div class="card-icon">⚙️</div>
                         <h3>Backend Systems</h3>
                         <p>Architecting secure logic and seamless data flow.</p>
                     </div>
@@ -77,26 +71,55 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-card reveal">
+        <!-- Selected Work Section -->
+        <section id="work" class="reveal section-padding">
             <div class="section-header">
-                <span class="section-index">02.</span> <h2>Contact</h2>
+                <span class="section-index">02.</span> <h2>Selected Work</h2>
             </div>
-            <h2 class="big-idea">Have a big idea? <span>Let's build it.</span></h2>
-            <form id="contact-form" action="https://formspree.io/f/meenovaq" method="POST" class="styled-form">
-                <input type="hidden" name="_next" value="https://meshack-portfolio.onrender.com/success.html">
-                <div class="input-row">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <span class="project-year">2026</span>
+                    <h3>Personal Portfolio</h3>
+                    <p>The interactive version of my professional identity, featuring glassmorphism and motion design.</p>
+                    <a href="https://github.com/MeshackO123/on" target="_blank" class="project-link">VIEW PROJECT →</a>
                 </div>
-                <textarea name="message" placeholder="Project details..." rows="4" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+                <div class="project-card">
+                    <span class="status-tag">IN PROGRESS</span>
+                    <h3>Backend Integration</h3>
+                    <p>A deep dive into server-side logic and database structures for scalable applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="reveal section-padding">
+            <div class="section-header">
+                <span class="section-index">03.</span> <h2>Contact</h2>
+            </div>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <h2 class="big-idea">Have a big idea?<br><span>Let's build it.</span></h2>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/meshack-okeyo" target="_blank">LINKEDIN</a>
+                        <a href="https://github.com/MeshackO123" target="_blank">GITHUB</a>
+                    </div>
+                </div>
+                
+                <form id="contact-form" action="https://formspree.io/f/meenovaq" method="POST" class="styled-form">
+                    <input type="hidden" name="_next" value="https://meshack-portfolio.onrender.com/success.html">
+                    <div class="input-row">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Project details..." rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>© 2026 MN. Built with precision.</p>
+        <p>© 2026 MN. Crafted with precision.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

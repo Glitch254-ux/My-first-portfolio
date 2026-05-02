@@ -1,20 +1,20 @@
-// Typing Animation
+// Typing effect
 new Typed('.typing-animate', {
-    strings: ['UI/UX Designer', 'Frontend Dev', 'IT Student', 'Problem Solver'],
-    typeSpeed: 50,
-    backSpeed: 30,
+    strings: ['UI/UX Designer', 'IT Student', 'Frontend Dev'],
+    typeSpeed: 60,
+    backSpeed: 40,
     loop: true
 });
 
-// Scroll Reveal
+// Scroll animations
 ScrollReveal().reveal('.reveal', {
-    distance: '50px',
-    duration: 1000,
+    distance: '60px',
+    duration: 1200,
     easing: 'cubic-bezier(0.5, 0, 0, 1)',
     interval: 200
 });
 
-// Mouse Glow Effect
+// Mouse glow effect
 const glow = document.querySelector('.cursor-glow');
 document.addEventListener('mousemove', (e) => {
     glow.style.left = e.clientX + 'px';
