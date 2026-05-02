@@ -82,7 +82,6 @@
                 <div class="project-card" data-aos="fade-up">
                     <h3>Personal Portfolio</h3>
                     <p>The interactive 2026 version of my professional identity. Built with HTML, CSS, and JS.</p>
-                    <!-- CORRECTED LINK BELOW -->
                     <a href="https://github.com/Glitch254-ux/My-first-portfolio" class="project-link">GITHUB REPO →</a>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
@@ -101,15 +100,15 @@
                 <span class="comment-label">// 03. Contact</span>
                 <h2>Let's build something amazing.</h2>
                 <div class="social-links">
-                    <!-- CORRECTED LINKS BELOW -->
                     <a href="https://github.com/Glitch254-ux" target="_blank">GITHUB</a>
                     <a href="https://www.linkedin.com/in/meshack-nyakundi-3a4516407" target="_blank">LINKEDIN</a>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your Message" rows="4"></textarea>
+            <!-- FORMSPREE INTEGRATION -->
+            <form action="https://formspree.io/f/meenovaq" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
@@ -129,5 +128,4 @@
         });
     </script>
 </body>
-</html>
 </html>
