@@ -1,4 +1,4 @@
-// Typing effect
+// Typing Animation
 new Typed('.typing-animate', {
     strings: ['UI/UX Designer', 'IT Student', 'Frontend Dev'],
     typeSpeed: 60,
@@ -6,7 +6,7 @@ new Typed('.typing-animate', {
     loop: true
 });
 
-// Scroll animations
+// Scroll Reveal Animations
 ScrollReveal().reveal('.reveal', {
     distance: '60px',
     duration: 1200,
@@ -14,7 +14,7 @@ ScrollReveal().reveal('.reveal', {
     interval: 200
 });
 
-// Mouse glow effect
+// Interactive Mouse Glow
 const glow = document.querySelector('.cursor-glow');
 document.addEventListener('mousemove', (e) => {
     glow.style.left = e.clientX + 'px';
