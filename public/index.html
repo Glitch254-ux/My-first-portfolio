@@ -3,97 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshack | UI/UX Designer & Developer</title>
-    <!-- Google Fonts & Font Awesome -->
+    <title>Meshack | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <div class="glow-bg"></div>
-    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Meshack<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact" class="nav-btn">Let's Talk</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- 01. Hero & About -->
+        <!-- Hero Section exactly like the image -->
+        <section class="hero-container">
+            <div class="hero-content">
+                <p class="hero-tag">OPEN FOR INTERNSHIPS 2026</p>
+                <h1>Hi, I'm <span>Meshack</span><br>a <span id="typing-passionate"></span><br>Cr|</h1>
+                <p class="hero-subtext">B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
+                <a href="#work" class="explore-btn">Explore My Work</a>
+            </div>
+            <div class="hero-visual">
+                <div class="mn-circle">
+                    <span>MN</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
         <section id="about" class="reveal">
             <p class="section-index">// 01. About Me</p>
-            <h1 class="main-title">Designing with <span id="typing-effect"></span></h1>
-            <div class="bio">
-                <p>I am a B.Sc. IT student with a deep passion for UI/UX design and front-end development. I bridge the gap between complex backend systems and beautiful, user-centric interfaces.</p>
-                <p>My goal is to create digital products that aren't just functional, but emotional and memorable.</p>
-            </div>
-
             <div class="services-grid">
                 <div class="service-card purple">
-                    <div class="card-icon">✦</div>
                     <h3>UI/UX Design</h3>
-                    <p>Wireframing, Prototyping, and User Research for seamless journeys.</p>
+                    <p>Wireframing and Prototyping for seamless journeys.</p>
                 </div>
                 <div class="service-card blue">
-                    <div class="card-icon">code</div>
                     <h3>Frontend Dev</h3>
-                    <p>Building high-performance web apps with modern, clean code.</p>
+                    <p>Building high-performance apps with modern code.</p>
                 </div>
                 <div class="service-card pink">
-                    <div class="card-icon">database</div>
                     <h3>Backend & Data</h3>
-                    <p>Architecting scalable server-side logic and complex databases.</p>
+                    <p>Architecting scalable logic and managing databases.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 02. Work Section -->
-        <section id="work" class="reveal">
-            <p class="section-index">// 02. My Work</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-tag">Full Stack</div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack shop with secure checkout and glassmorphism UI.</p>
-                    <div class="project-link">View Project →</div>
-                </div>
-                <div class="project-card">
-                    <div class="project-tag">Node.js</div>
-                    <h3>Task Manager</h3>
-                    <p>Productivity app featuring real-time data syncing and clean UX.</p>
-                    <div class="project-link">View Project →</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 03. Contact Section -->
+        <!-- Contact Section -->
         <section id="contact" class="contact-card reveal">
             <div class="contact-header">
-                <p class="section-index">// 03. Contact</p>
+                <p class="section-index">// 02. Contact</p>
                 <h2>Let's build something amazing.</h2>
                 <div class="socials">
-                    <a href="#" class="social-btn">GITHUB</a>
-                    <a href="#" class="social-btn">LINKEDIN</a>
+                    <a href="#" class="social-link">GITHUB</a>
+                    <a href="#" class="social-link">LINKEDIN</a>
                 </div>
             </div>
-            
             <form action="https://formspree.io/f/meenovaq" method="POST" class="styled-form">
-                <div class="input-group">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <textarea name="message" placeholder="How can I help you?" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">
-                    <span>Send Message</span>
-                </button>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="How can I help you?" rows="4" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </section>
-
-        <footer>
-            <p>© 2026 Meshack Nyakundi. Built with precision.</p>
-        </footer>
     </div>
 
-    <!-- Typed.js for the Effect -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
 </body>
