@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshack | Creative Developer</title>
+    <title>Meshack | Web Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +12,7 @@
     
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">M<span>N</span></div>
+            <div class="logo">Meshack<span>.</span></div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
@@ -22,93 +22,100 @@
     </nav>
 
     <main class="container">
-        <!-- Hero Section -->
+        <!-- Hero Section matched to screenshot -->
         <section class="hero">
-            <div class="hero-badge">Available for Projects 2026</div>
-            <h1 class="hero-title">Crafting <span class="text-gradient">Digital</span><br>Experiences.</h1>
-            <p class="hero-sub">B.Sc. IT Student & UI/UX Designer. Focused on high-performance code and human-centered design.</p>
-            <div class="hero-actions">
-                <a href="#work" class="btn-main">View Projects</a>
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <p class="hero-tag">AVAILABLE FOR OPPORTUNITIES 2026</p>
+                    <h1 class="hero-title">Hi, I'm <span class="text-gradient">Meshack</span><br>a passionate<br>Web Developer|</h1>
+                    <p class="hero-sub">B.Sc. IT Student crafting digital experiences through clean code and modern design.</p>
+                    <a href="#work" class="btn-main">Explore My Work</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="mn-circle">MN</div>
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Designing with Purpose Section -->
         <section id="about" class="section-padding">
-            <div class="about-grid">
-                <div class="bio-text">
-                    <span class="label">01. About Me</span>
-                    <h2>Solving problems through <span class="highlight">creative code</span>.</h2>
-                    <p class="text-muted">I specialize in <strong>HTML, CSS, and JavaScript</strong> to build websites that aren't just functional, but memorable. My goal is to merge technical efficiency with visual excellence.</p>
+            <span class="label">01. About Me</span>
+            <div class="about-header">
+                <h2>Designing with Purpose</h2>
+                <p class="text-muted">I am a B.Sc. IT student with a foundation in UI/UX design and frontend development. I build digital solutions that aren't just functional but visually stunning.</p>
+            </div>
+            <div class="services-row">
+                <div class="glass-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive interfaces through user research.</p>
                 </div>
-                <div class="services">
-                    <div class="glass-card">
-                        <div class="card-tag">UI/UX</div>
-                        <h3>Product Design</h3>
-                        <p>Visual research and intuitive interface mapping.</p>
-                    </div>
-                    <div class="glass-card">
-                        <div class="card-tag">DEV</div>
-                        <h3>Frontend Dev</h3>
-                        <p>Modern, responsive, and optimized web systems.</p>
-                    </div>
+                <div class="glass-card">
+                    <h3>Frontend Dev</h3>
+                    <p>Building responsive sites with modern JavaScript.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>Backend & Data</h3>
+                    <p>Optimizing server-side logic and database structures.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Work Section -->
+        <!-- Selected Work -->
         <section id="work" class="section-padding">
-            <span class="label">02. Selected Work</span>
+            <span class="label">02. My Work</span>
             <div class="projects-grid">
-                <a href="https://github.com/MeshackO123" target="_blank" class="project-box">
-                    <span class="year">2026</span>
-                    <h3>Personal Portfolio</h3>
-                    <p>High-end identity featuring glassmorphism and motion design.</p>
-                    <span class="arrow">↗</span>
-                </a>
-                <div class="project-box is-locked">
-                    <span class="year">2026</span>
-                    <h3>Backend Architecture</h3>
-                    <p>Scaling server-side logic for real-world applications.</p>
-                    <span class="status">IN PROGRESS</span>
+                <div class="project-item">
+                    <h3>E-commerce Platform</h3>
+                    <p>A full-stack shop with modern UI/UX.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Task Manager</h3>
+                    <p>Productivity app with backend integration.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Form with Auto-Reset -->
         <section id="contact" class="section-padding">
             <div class="contact-grid">
                 <div class="contact-intro">
                     <span class="label">03. Contact</span>
                     <h2>Let's build<br><span class="text-gradient">together.</span></h2>
-                    <div class="social-links">
-                        <a href="https://github.com/MeshackO123" target="_blank" class="social-pill">GITHUB</a>
-                    </div>
+                    <a href="https://github.com/MeshackO123" target="_blank" class="social-pill">GITHUB</a>
                 </div>
                 <div class="form-wrapper">
-                    <!-- Updated with Formspree and ID for Scripting -->
                     <form id="contact-form" action="https://formspree.io/f/meenovaq" method="POST">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <textarea name="message" placeholder="Project Details" rows="4" required></textarea>
+                        <div class="input-row">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <textarea name="message" placeholder="Project Details" rows="5" required></textarea>
                         <button type="submit" id="submit-btn">Send Message</button>
+                        <p id="form-status"></p>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>© 2026 Meshack. Built with precision.</p>
-    </footer>
-
     <script>
-        // Automatic form reset after submission
-        window.addEventListener("load", function() {
-            const form = document.getElementById('contact-form');
-            form.addEventListener("submit", function() {
-                // Short delay to allow submission before clearing
-                setTimeout(() => { form.reset(); }, 100);
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const data = new FormData(e.target);
+            const response = await fetch(e.target.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
             });
+            if (response.ok) {
+                status.innerHTML = "Success! I'll be in touch.";
+                form.reset();
+            } else {
+                status.innerHTML = "Error sending message.";
+            }
         });
     </script>
 </body>
