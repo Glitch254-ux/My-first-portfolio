@@ -3,119 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshack | Web Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Meshack | Creative Technologist</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="glow-bg"></div>
-    
-    <nav class="navbar">
+
+    <!-- Premium Nav -->
+    <nav class="glass-nav">
         <div class="nav-content">
-            <div class="logo">Meshack<span>.</span></div>
+            <div class="logo-circle">MN</div>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
-        <!-- Hero Section matched to screenshot -->
-        <section class="hero">
-            <div class="hero-layout">
-                <div class="hero-text">
-                    <p class="hero-tag">AVAILABLE FOR OPPORTUNITIES 2026</p>
-                    <h1 class="hero-title">Hi, I'm <span class="text-gradient">Meshack</span><br>a passionate<br>Web Developer|</h1>
-                    <p class="hero-sub">B.Sc. IT Student crafting digital experiences through clean code and modern design.</p>
-                    <a href="#work" class="btn-main">Explore My Work</a>
-                </div>
-                <div class="hero-visual">
-                    <div class="mn-circle">MN</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text" data-aos="fade-right">
+                <span class="status-tag">OPEN FOR INTERNSHIPS 2026</span>
+                <h1>Hi, I'm <span class="text-gradient">Meshack</span><br>
+                a passionate <span id="typing"></span></h1>
+                <p class="hero-tagline">B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
+                <div class="hero-btns">
+                    <a href="#work" class="btn btn-primary">Explore My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
                 </div>
             </div>
-        </section>
+            <div class="hero-visual" data-aos="zoom-in">
+                <div class="glow-sphere">MN</div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Designing with Purpose Section -->
-        <section id="about" class="section-padding">
-            <span class="label">01. About Me</span>
-            <div class="about-header">
-                <h2>Designing with Purpose</h2>
-                <p class="text-muted">I am a B.Sc. IT student with a foundation in UI/UX design and frontend development. I build digital solutions that aren't just functional but visually stunning.</p>
-            </div>
-            <div class="services-row">
-                <div class="glass-card">
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <span class="comment-label" data-aos="fade-up">// 01. About Me</span>
+            <h2 class="section-title" data-aos="fade-up">Solving problems through clean code.</h2>
+            <p class="about-bio" data-aos="fade-up">
+                I am an IT student with a growing passion for technology and software development. I have been building my skills through hands-on projects, especially in web development using <strong>HTML, CSS, and JavaScript</strong>. I enjoy creating responsive and visually appealing websites, as well as exploring how frontend and backend systems work together.
+            </p>
+            
+            <div class="skills-grid" id="skills">
+                <div class="skill-card" data-aos="flip-up">
+                    <span class="skill-icon">✦</span>
                     <h3>UI/UX Design</h3>
-                    <p>Creating intuitive interfaces through user research.</p>
+                    <p>User research and visual design focusing on intuitive experiences.</p>
                 </div>
-                <div class="glass-card">
+                <div class="skill-card" data-aos="flip-up" data-aos-delay="100">
+                    <span class="skill-icon">{ }</span>
                     <h3>Frontend Dev</h3>
-                    <p>Building responsive sites with modern JavaScript.</p>
+                    <p>Building responsive, high-performance websites with modern JS.</p>
                 </div>
-                <div class="glass-card">
-                    <h3>Backend & Data</h3>
-                    <p>Optimizing server-side logic and database structures.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Selected Work -->
-        <section id="work" class="section-padding">
-            <span class="label">02. My Work</span>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <h3>E-commerce Platform</h3>
-                    <p>A full-stack shop with modern UI/UX.</p>
-                </div>
-                <div class="project-item">
-                    <h3>Task Manager</h3>
-                    <p>Productivity app with backend integration.</p>
+                <div class="skill-card" data-aos="flip-up" data-aos-delay="200">
+                    <span class="skill-icon">❖</span>
+                    <h3>Backend Systems</h3>
+                    <p>Architecting secure logic and seamless data flow.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Form with Auto-Reset -->
-        <section id="contact" class="section-padding">
-            <div class="contact-grid">
-                <div class="contact-intro">
-                    <span class="label">03. Contact</span>
-                    <h2>Let's build<br><span class="text-gradient">together.</span></h2>
-                    <a href="https://github.com/MeshackO123" target="_blank" class="social-pill">GITHUB</a>
+    <!-- Projects Section -->
+    <section id="work" class="section-padding">
+        <div class="container">
+            <span class="comment-label" data-aos="fade-up">// 02. Selected Work</span>
+            <div class="projects-container">
+                <div class="project-card" data-aos="fade-up">
+                    <h3>Personal Portfolio</h3>
+                    <p>The interactive 2026 version of my professional identity. Built with HTML, CSS, and JS.</p>
+                    <a href="https://github.com/MeshackO123" class="project-link">GITHUB REPO →</a>
                 </div>
-                <div class="form-wrapper">
-                    <form id="contact-form" action="https://formspree.io/f/meenovaq" method="POST">
-                        <div class="input-row">
-                            <input type="text" name="name" placeholder="Full Name" required>
-                            <input type="email" name="email" placeholder="Email Address" required>
-                        </div>
-                        <textarea name="message" placeholder="Project Details" rows="5" required></textarea>
-                        <button type="submit" id="submit-btn">Send Message</button>
-                        <p id="form-status"></p>
-                    </form>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Future Systems</h3>
+                    <p>Exploring backend integration and database structures for scalable IT solutions.</p>
+                    <span class="status-purple">IN DEVELOPMENT</span>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="contact-box glass" data-aos="zoom-out">
+            <div class="contact-info">
+                <span class="comment-label">// 03. Contact</span>
+                <h2>Let's build something amazing.</h2>
+                <div class="social-links">
+                    <a href="https://github.com/MeshackO123" target="_blank">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/meshack-nyakundi-3a4516407" target="_blank">LINKEDIN</a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your Message" rows="4"></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        const form = document.getElementById("contact-form");
-        const status = document.getElementById("form-status");
-
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const data = new FormData(e.target);
-            const response = await fetch(e.target.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-            if (response.ok) {
-                status.innerHTML = "Success! I'll be in touch.";
-                form.reset();
-            } else {
-                status.innerHTML = "Error sending message.";
-            }
+        AOS.init({ duration: 1000, once: true });
+        
+        var typed = new Typed('#typing', {
+            strings: ['Frontend Developer', 'Creative Technologist', 'Problem Solver'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
         });
     </script>
 </body>
