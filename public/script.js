@@ -1,10 +1,10 @@
-// Mouse Glow
+// Mouse Glow Implementation
 document.addEventListener('mousemove', (e) => {
     document.body.style.setProperty('--x', e.clientX + 'px');
     document.body.style.setProperty('--y', e.clientY + 'px');
 });
 
-// Final Recommended Typing Effect
+// Final Recommended Typing Strings
 new Typed('#typing-passionate', {
     strings: [
         'Passionate Developer', 
@@ -19,7 +19,13 @@ new Typed('#typing-passionate', {
     cursorChar: '|'
 });
 
-// Reveal
+// Form Auto-Reset Logic
+window.addEventListener("pageshow", () => {
+    const form = document.getElementById("contact-form");
+    if (form) form.reset();
+});
+
+// Reveal Animations
 const sr = ScrollReveal({
     origin: 'bottom',
     distance: '60px',
