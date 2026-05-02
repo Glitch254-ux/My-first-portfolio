@@ -3,32 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success | Meshack Nyakundi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap" rel="stylesheet">
+    <title>Message Received | Meshack</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root { --bg: #030303; --accent: #8a2be2; --text: #ffffff; }
-        body { 
-            background: var(--bg); color: var(--text); 
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            height: 100vh; display: flex; align-items: center; justify-content: center;
-            margin: 0; overflow: hidden;
-        }
-        .container { text-align: center; padding: 20px; z-index: 2; }
-        h1 { font-size: 3.5rem; margin-bottom: 10px; color: var(--accent); letter-spacing: -2px; }
-        p { color: #999; margin-bottom: 30px; font-size: 1.1rem; }
-        .back-btn {
-            padding: 15px 35px; background: white; color: black;
-            text-decoration: none; border-radius: 12px; font-weight: 800;
-            transition: 0.3s; display: inline-block;
-        }
-        .back-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255,255,255,0.1); }
+        body { display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+        .success-box { padding: 60px; background: var(--glass); border: 1px solid var(--accent); border-radius: 30px; }
+        h1 { font-size: 3rem; margin-bottom: 20px; }
+        p { color: #888; margin-bottom: 30px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Message Received! 🚀</h1>
-        <p>Thank you for reaching out. I'll get back to you shortly.</p>
-        <a href="index.html" class="back-btn">Return to Portfolio</a>
+    <div class="success-box reveal">
+        <h1>Message Received! ⚡</h1>
+        <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+        <a href="index.html" class="nav-btn">Back to Portfolio</a>
     </div>
 </body>
 </html>
