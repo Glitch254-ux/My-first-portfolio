@@ -1,5 +1,3 @@
-/* --- Master CSS for Portfolio --- */
-
 :root {
     --bg-dark: #0a0a0a;
     --card-glass: rgba(255, 255, 255, 0.05);
@@ -8,120 +6,81 @@
     --accent-purple: #9d4edd;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+.section-padding { padding: 100px 0; }
+
+/* Navigation */
+.glass-nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-glass); padding: 1.2rem 0;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    overflow-x: hidden;
-}
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
 
-/* Fix for browser autofill background */
-input:-webkit-autofill,
-textarea:-webkit-autofill {
-    -webkit-text-fill-color: #ffffff !important;
-    -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
-    transition: background-color 5000s ease-in-out 0s;
-}
+.nav-links { display: flex; list-style: none; gap: 2rem; }
 
-/* Text Gradient with Compatibility Fix */
+.nav-links a { color: white; text-decoration: none; opacity: 0.8; transition: 0.3s; font-weight: 500; }
+
+.logo { font-weight: 800; font-size: 1.6rem; color: var(--accent-purple); }
+
+/* Hero */
+.hero { height: 100vh; display: flex; align-items: center; text-align: center; background: radial-gradient(circle at center, rgba(157, 78, 221, 0.05) 0%, transparent 70%); }
+
 .text-gradient {
     background: linear-gradient(45deg, #fff, var(--accent-purple));
-    -webkit-background-clip: text; 
-    background-clip: text;         /* Fixes the VS Code compatibility warning */
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 
-.section-padding { padding: 80px 0; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* Skills Grid & Cards */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* Skills Grid Fix */
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 3rem;
 }
 
 .skill-card {
-    padding: 30px;
-    background: var(--card-glass);
-    border: 1px solid var(--border-glass);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    background: var(--card-glass); border: 1px solid var(--border-glass);
+    padding: 2.5rem; border-radius: 20px; backdrop-filter: blur(10px); transition: 0.4s;
 }
 
-.skill-card:hover {
-    border-color: var(--accent-purple);
-    transform: translateY(-5px);
+.skill-card:hover { transform: translateY(-10px); border-color: var(--accent-purple); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+/* Projects */
+.projects-container { display: grid; gap: 2rem; margin-top: 2rem; }
+.project-card { background: var(--card-glass); border: 1px solid var(--border-glass); padding: 2.5rem; border-radius: 20px; }
+.status-purple { color: var(--accent-purple); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; display: block; margin-top: 1rem; }
+
+/* Contact Form */
+.contact-box {
+    background: var(--card-glass); border: 1px solid var(--border-glass);
+    border-radius: 24px; padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
 }
 
-/* Projects & Status */
-.project-card {
-    padding: 2rem;
-    background: var(--card-glass);
-    border: 1px solid var(--border-glass);
-    border-radius: 15px;
-    margin-bottom: 20px;
+.contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass);
+    padding: 1.2rem; color: white; border-radius: 12px; outline: none; font-size: 1rem;
 }
 
-.status-purple {
-    color: var(--accent-purple);
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
-
-/* Hire Me (Call to Action) Box */
-.cta-box {
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--border-glass);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
+.cta-box { padding: 4rem; background: var(--card-glass); border-radius: 24px; border: 1px solid var(--border-glass); margin-top: 2rem; }
 
 /* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-    cursor: pointer;
-}
+.btn { padding: 14px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; cursor: pointer; display: inline-block; transition: 0.3s; }
 
-.btn-primary {
-    background: var(--accent-purple);
-    color: white;
-    border: none;
-}
+.btn-primary { background: var(--accent-purple); color: white; border: none; }
 
-.btn-primary:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
+.btn-secondary { border: 1px solid var(--border-glass); color: white; margin-left: 15px; }
 
-.btn-secondary {
-    border: 1px solid var(--border-glass);
-    color: white;
-    margin-left: 10px;
-}
+.btn:hover { opacity: 0.9; transform: scale(1.05); box-shadow: 0 5px 15px rgba(157, 78, 221, 0.3); }
 
-/* Nav & Contact Links */
-.social-links a {
-    color: var(--text-main);
-    text-decoration: none;
-    margin-right: 15px;
-    font-weight: 600;
-    opacity: 0.7;
-}
-
-.social-links a:hover { opacity: 1; }
+/* Mobile Fixes */
+@media (max-width: 992px) { .contact-box { grid-template-columns: 1fr; padding: 2rem; } }
+@media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 2.5rem; } }
