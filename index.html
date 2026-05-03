@@ -3,29 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshack | Creative Technologist</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Meshack | Full Stack Developer & DBMS Expert</title>
+    <link rel="icon" type="image/png" href="./public/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Fix for browser autofill turning inputs white */
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus {
-            -webkit-text-fill-color: #ffffff !important;
-            -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
-            transition: background-color 5000s ease-in-out 0s;
-        }
-        .hero-text h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 0.5rem; font-weight: 800; }
-    </style>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="glass-nav">
         <div class="nav-content">
-            <div class="logo-circle">M</div>
+            <div class="logo">MN</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -38,96 +27,84 @@
 
     <section id="home" class="hero">
         <div class="hero-container">
-            <div class="hero-text" data-aos="fade-right">
+            <div class="hero-info" data-aos="fade-right">
                 <span class="status-tag">Open for Internships 2026</span>
                 <h1>Hi, I'm <span class="text-gradient">Meshack</span></h1>
-                <h1>a passionate</h1>
-                <h1 class="text-gradient"><span id="typing"></span></h1>
-                
-                <p>B.Sc. IT Student crafting high-end digital experiences through clean code and modern design.</p>
-                
+                <h2 class="typing-text">A passionate <span id="typing" class="text-gradient"></span></h2>
+                <p>IT Student at Kirinyaga University crafting high-end digital experiences through clean code and modern design.</p>
                 <div class="hero-btns">
                     <a href="#work" class="btn btn-primary">Explore My Work</a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
-            
             <div class="hero-visual" data-aos="zoom-in">
-                <div class="glow-sphere">
-                    <span class="initials">MN</span>
-                </div>
+                <div class="glow-sphere"></div>
+                <span class="initials">MN</span>
             </div>
         </div>
     </section>
 
     <section id="about" class="section-padding">
         <div class="container">
-            <span class="comment-label" data-aos="fade-up">// 01. About Me</span>
+            <span class="comment-label">// 01. About Me</span>
             <h2 class="section-title" data-aos="fade-up">Solving problems through clean code.</h2>
             <p class="about-bio" data-aos="fade-up">
-                I am an IT student at Kirinyaga University with a growing passion for software development. I have been building my skills through hands-on projects in web development and technical SEO.
+                I am a dedicated IT student at **Kirinyaga University** with a deep passion for Software Development and **Database Management Systems (DBMS)**. 
+                I specialize in building responsive frontend interfaces and secure backend architectures. My goal is to bridge the gap between complex logic and intuitive user experiences.
             </p>
-            
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding">
+        <div class="container">
             <div class="skills-grid" id="skills">
-    <!-- UI/UX Design -->
-    <div class="skill-card" data-aos="flip-up">
-        <span class="skill-icon">🎨</span>
-        <h3>UI/UX Design</h3>
-        <p>User research and visual design focusing on intuitive experiences and modern gradients.</p>
-    </div>
-
-    <!-- Backend & DBMS -->
-    <div class="skill-card" data-aos="flip-up" data-aos-delay="100">
-        <span class="skill-icon">🗄️</span>
-        <h3>Backend & DBMS</h3>
-        <p>Expertise in Database Management Systems and building secure, scalable server architectures.</p>
-    </div>
-
-    <!-- Frontend Dev -->
-    <div class="skill-card" data-aos="flip-up" data-aos-delay="200">
-        <span class="skill-icon">💻</span>
-        <h3>Frontend Dev</h3>
-        <p>Building responsive, high-performance websites with modern HTML, CSS, and JS.</p>
-    </div>
-
-    <!-- Software Development (C) -->
-    <div class="skill-card" data-aos="flip-up" data-aos-delay="300">
-        <span class="skill-icon">⚙️</span>
-        <h3>Software Dev</h3>
-        <p>Strong foundation in C programming and algorithmic problem-solving for efficient solutions.</p>
-    </div>
-
-    <!-- SEO & Optimization -->
-    <div class="skill-card" data-aos="flip-up" data-aos-delay="400">
-        <span class="skill-icon">🚀</span>
-        <h3>SEO & Optimization</h3>
-        <p>Site verification and indexing management via Google Search Console for discoverability.</p>
-    </div>
-</div>
+                <div class="skill-card" data-aos="flip-up">
+                    <span class="skill-icon">🎨</span>
+                    <h3>UI/UX Design</h3>
+                    <p>User research and visual design focusing on intuitive experiences and modern gradients.</p>
+                </div>
+                <div class="skill-card" data-aos="flip-up" data-aos-delay="100">
+                    <span class="skill-icon">🗄️</span>
+                    <h3>Backend & DBMS</h3>
+                    <p>Expertise in Database Management Systems and building secure, scalable server architectures.</p>
+                </div>
+                <div class="skill-card" data-aos="flip-up" data-aos-delay="200">
+                    <span class="skill-icon">💻</span>
+                    <h3>Frontend Dev</h3>
+                    <p>Building responsive, high-performance websites with modern HTML, CSS, and interactive JS.</p>
+                </div>
+                <div class="skill-card" data-aos="flip-up" data-aos-delay="300">
+                    <span class="skill-icon">⚙️</span>
+                    <h3>Software Dev</h3>
+                    <p>Strong foundation in **C programming** and algorithmic problem-solving for efficient solutions.</p>
+                </div>
+                <div class="skill-card" data-aos="flip-up" data-aos-delay="400">
+                    <span class="skill-icon">🚀</span>
+                    <h3>SEO & Optimization</h3>
+                    <p>Site verification and indexing management via Google Search Console.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="work" class="section-padding">
-    <div class="container">
-        <span class="comment-label" data-aos="fade-up">// 02. Selected Work</span>
-        <h2 class="section-title" data-aos="fade-up">Projects I've Built</h2>
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card" data-aos="fade-up">
-                <h3>Web Deployment & Search Optimization</h3>
-                <p>Successfully deployed a modern, responsive portfolio website to a public URL. Verified site ownership and requested a priority index crawl using Google Search Console to ensure search engine discoverability. Managed hosting and deployment through the Render cloud platform.</p>
-                <a href="https://github.com/Ditech254/my-first-portfolio" class="project-link" target="_blank">GITHUB REPO →</a>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>Professional Security & Digital Branding</h3>
-                <p>Established a secure digital identity across professional platforms including GitHub and LinkedIn. Implemented Two-Factor Authentication (2FA) and configured secure recovery protocols to protect professional development assets. Prepared a professional foundation for freelance service platforms.</p>
-                <span class="status-purple">COMPLETED</span>
+        <div class="container">
+            <span class="comment-label">// 02. Selected Work</span>
+            <h2 class="section-title" data-aos="fade-up">Projects I've Built</h2>
+            <div class="projects-container">
+                <div class="project-card" data-aos="fade-up">
+                    <h3>Web Deployment & Search Optimization</h3>
+                    <p>Deployed a modern portfolio to a public URL via **Render**. Managed indexing through Google Search Console.</p>
+                    <a href="https://github.com/Glitch254-ux/My-first-portfolio" class="project-link" target="_blank">GITHUB REPO →</a>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Professional Security & Digital Branding</h3>
+                    <p>Implemented 2FA and secure recovery protocols for GitHub and LinkedIn.</p>
+                    <span class="status-purple">COMPLETED</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="contact" class="section-padding">
         <div class="container">
@@ -140,7 +117,6 @@
                         <a href="https://www.linkedin.com/in/meshack-nyakundi-3a4516407" target="_blank">LINKEDIN</a>
                     </div>
                 </div>
-                
                 <form id="my-form" action="https://formspree.io/f/meenovaq" method="POST" class="contact-form">
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email" required>
@@ -151,25 +127,26 @@
         </div>
     </section>
 
+    <section id="hire-me" class="section-padding">
+        <div class="container" style="text-align: center;">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Let's Work Together</h2>
+                <p>I am available for freelance projects and collaborations. If you have an idea for a website or a database system, let's talk!</p>
+                <a href="mailto:meshacknyakundi45@gmail.com" class="btn btn-primary">Send a Message ✉️</a>
+            </div>
+        </div>
+    </section>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-
         var typed = new Typed('#typing', {
-            /* Fixed: Removed 'Passionate' from strings to avoid repetition with the static 'a passionate' text */
-            strings: ['Developer', 'UI/UX Designer', 'Problem Solver', 'Tech Enthusiast'],
+            strings: ['Developer', 'UI/UX Designer', 'DBMS Expert', 'Problem Solver'],
             typeSpeed: 60,
             backSpeed: 40,
-            backDelay: 2000,
             loop: true
         });
-
-        window.onpageshow = function(event) {
-            if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-                document.getElementById('my-form').reset();
-            }
-        };
     </script>
 </body>
 </html>
