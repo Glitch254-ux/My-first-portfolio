@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meshack | Full Stack Developer & DBMS Expert</title>
-    <link rel="icon" type="image/png" href="./public/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,51 +12,47 @@
 <body>
 
     <nav class="glass-nav">
-        <div class="nav-content">
-            <div class="logo">MN</div>
+        <div class="container nav-content">
+            <div class="logo">Meshack<span class="dot">.</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#work">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="mailto:meshacknyakundi45@gmail.com" class="btn btn-talk">Let's Talk</a>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-info" data-aos="fade-right">
+        <div class="container hero-split">
+            <div class="hero-info">
                 <span class="status-tag">Open for Internships 2026</span>
                 <h1>Hi, I'm <span class="text-gradient">Meshack</span></h1>
-                <h2 class="typing-text">A passionate <span id="typing" class="text-gradient"></span></h2>
-                <p>IT Student at Kirinyaga University crafting high-end digital experiences through clean code and modern design.</p>
+                <h2 class="typing-text">a passionate <br><span id="typing" class="text-gradient"></span></h2>
+                <p>B.Sc. IT Student at Kirinyaga University crafting high-end digital experiences through clean code and modern design.</p>
                 <div class="hero-btns">
                     <a href="#work" class="btn btn-primary">Explore My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="#contact" class="btn btn-text">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="circle-wrap">
+                    <div class="initials-circle">MN</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section-padding">
-        <div class="container">
-            <span class="comment-label">// 01. About Me</span>
-            <h2 class="section-title">Solving problems through clean code.</h2>
-            <p class="about-bio">
-                I am a dedicated IT student at **Kirinyaga University** specializing in **Full Stack Development** and **DBMS**. I build secure, scalable architectures and intuitive interfaces.
-            </p>
-        </div>
-    </section>
-
     <section id="skills" class="section-padding">
         <div class="container">
+            <span class="comment-label">// Core Competencies</span>
             <div class="skills-grid">
-                <div class="skill-card"><h3>🎨 UI/UX Design</h3><p>User research and visual design focusing on intuitive experiences and modern gradients.</p></div>
-                <div class="skill-card"><h3>🗄️ Backend & DBMS</h3><p>Expertise in Database Management Systems and building secure, scalable server architectures.</p></div>
-                <div class="skill-card"><h3>💻 Frontend Dev</h3><p>Building responsive, high-performance websites with modern HTML, CSS, and interactive JS.</p></div>
-                <div class="skill-card"><h3>⚙️ Software Dev</h3><p>Strong foundation in **C programming** and algorithmic problem-solving for efficient solutions.</p></div>
-                <div class="skill-card"><h3>🚀 SEO & Optimization</h3><p>Site verification and indexing management via Google Search Console for discoverability.</p></div>
+                <div class="skill-card"><h3>🎨 UI/UX Design</h3><p>Modern layouts with glassmorphism and vibrant gradients.</p></div>
+                <div class="skill-card"><h3>🗄️ Backend & DBMS</h3><p>Database Management Systems expert with secure architecture.</p></div>
+                <div class="skill-card"><h3>💻 Frontend Dev</h3><p>Building high-performance, responsive web applications.</p></div>
+                <div class="skill-card"><h3>⚙️ Software Dev</h3><p>Proficient in C programming and algorithmic logic.</p></div>
+                <div class="skill-card"><h3>🚀 SEO & Optimization</h3><p>Google Search Console management and site indexing.</p></div>
             </div>
         </div>
     </section>
@@ -68,7 +64,7 @@
             <div class="projects-container">
                 <div class="project-card">
                     <h3>Web Deployment & Search Optimization</h3>
-                    <p>Deployed a modern portfolio to a public URL via **Render**. Managed indexing through Google Search Console.</p>
+                    <p>Deployed a modern portfolio to a public URL via Render. Managed indexing through Google Search Console.</p>
                     <a href="https://github.com/Glitch254-ux/My-first-portfolio" class="project-link" target="_blank">GITHUB REPO →</a>
                 </div>
                 <div class="project-card">
@@ -84,12 +80,8 @@
         <div class="container">
             <div class="contact-box">
                 <div class="contact-info">
-                    <span class="comment-label">// 03. Contact</span>
                     <h2>Let's build something amazing.</h2>
-                    <div class="social-links">
-                        <a href="https://github.com/Glitch254-ux" target="_blank">GITHUB</a>
-                        <a href="https://www.linkedin.com/in/meshack-nyakundi-3a4516407" target="_blank">LINKEDIN</a>
-                    </div>
+                    <p>Reach out for freelance projects or professional collaborations.</p>
                 </div>
                 <form id="my-form" action="https://formspree.io/f/meenovaq" method="POST" class="contact-form">
                     <input type="text" name="name" placeholder="Full Name" required>
@@ -101,22 +93,21 @@
         </div>
     </section>
 
-    <section id="hire-me" class="section-padding">
-        <div class="container" style="text-align: center;">
-            <div class="cta-box">
-                <h2>Let's Work Together</h2>
-                <p>Available for freelance projects and collaborations. Let's talk!</p>
-                <a href="mailto:meshacknyakundi45@gmail.com" class="btn btn-primary">Send a Message ✉️</a>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Meshack Nyakundi. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="sitemap.xml">Sitemap</a>
+                <a href="https://github.com/Glitch254-ux" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
         var typed = new Typed('#typing', {
-            strings: ['Developer', 'UI/UX Designer', 'DBMS Expert'],
+            strings: ['UI Designer', 'Full Stack Dev', 'DBMS Expert', 'C Programmer'],
             typeSpeed: 60,
             backSpeed: 40,
             loop: true
