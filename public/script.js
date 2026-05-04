@@ -1,8 +1,14 @@
 // Typing Animation
-new Typed('.typing-animate', {
-    strings: ['UI/UX Designer', 'IT Student', 'Frontend Dev'],
-    typeSpeed: 60,
-    backSpeed: 40,
+new Typed('#typing', {
+    strings: [
+        'Developer', 
+        'Frontend Developer', 
+        'Problem Solver', 
+        'Tech Enthusiast'
+    ],
+    typeSpeed: 100,   // Slower for professional mobile reading
+    backSpeed: 50,    // Smooth erasing speed
+    backDelay: 2000,  // Stays visible for 2 seconds
     loop: true
 });
 
