@@ -151,14 +151,14 @@
         loop: true
     });
 
-    // 3. Form Submission & Auto-Reset Logic
+   // 3. Form Submission & Auto-Reset Logic
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault(); // Prevents page redirect
-            
+
             const originalBtnText = submitBtn.innerText;
             submitBtn.innerText = "Sending...";
             submitBtn.disabled = true;
@@ -174,7 +174,7 @@
 
                 if (response.ok) {
                     alert("Message sent successfully!");
-                    contactForm.reset(); // This clears the Name, Email, and Message fields
+                    contactForm.reset(); 
                 } else {
                     alert("Oops! There was a problem sending your message.");
                 }
@@ -186,6 +186,12 @@
             }
         });
     }
-</script>
+    </script>
+
+    <!-- 1. Load the Typed.js Library First -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- 2. Link your external script file -->
+    <script src="public/script.js"></script> 
 </body>
 </html>
