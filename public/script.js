@@ -1,14 +1,15 @@
 // Typing Animation
 new Typed('#typing', {
     strings: [
-        'Developer', 
-        'Frontend Developer', 
-        'Problem Solver', 
-        'Tech Enthusiast'
+        'Developer',
+        'Frontend Developer',
+        'Problem Solver',
+        'Tech Enthusiast',
+        'UI/UX Designer'
     ],
-    typeSpeed: 100,   // Slower for professional mobile reading
-    backSpeed: 50,    // Smooth erasing speed
-    backDelay: 2000,  // Stays visible for 2 seconds
+    typeSpeed: 100, // Slower for professional mobile reading
+    backSpeed: 50,  // Smooth erasing speed
+    backDelay: 2000, // Stays visible for 2 seconds
     loop: true
 });
 
@@ -23,6 +24,8 @@ ScrollReveal().reveal('.reveal', {
 // Interactive Mouse Glow
 const glow = document.querySelector('.cursor-glow');
 document.addEventListener('mousemove', (e) => {
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
+    if (glow) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+    }
 });
